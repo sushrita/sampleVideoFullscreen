@@ -9,14 +9,14 @@ import android.widget.VideoView;
 
 public class MainActivity extends Activity {
 
-    private VideoView video;
+    private CustomVideoView video;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        video = (VideoView) findViewById(R.id.myvideoview);
+        video = (CustomVideoView) findViewById(R.id.myvideoview);
         video.setVideoURI(Uri.parse("http://html5demos.com/assets/dizzy.mp4"));
         video.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
